@@ -194,7 +194,7 @@ const Formular = ({}) => {
 
           <button
             type="submit"
-            className="bg-accent rounded-lg text-white py-4 text-textwhite w-[100%] sm:w-[90%] text-center hover:opacity-80 duration-100"
+            className="bg-green-500 rounded-lg text-white py-4 text-textwhite w-[100%] sm:w-[90%] text-center hover:opacity-80 duration-100"
           >
             <span className="uppercase">Senden</span>
           </button>
