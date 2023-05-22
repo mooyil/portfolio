@@ -19,7 +19,7 @@ const Formular = ({}) => {
   const [recaptchaToken, setRecaptchaToken] = useState(null);
   const [formModalShow, setFormModalShow] = useState(false);
 
-  const clearForm = ({ setFormModal }) => {
+  const clearForm = () => {
     setName("");
     setSubject("");
     setEmail("");
@@ -42,23 +42,23 @@ const Formular = ({}) => {
     setMessage(e.target.value);
   };
 
-  const handleRecaptcha = (token) => {
-    setRecaptchaToken(token);
-    setIsNotVerified(false);
-  };
+  // const handleRecaptcha = (token) => {
+  //   setRecaptchaToken(token);
+  //   setIsNotVerified(false);
+  // };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     // Überprüfen Sie, ob das reCAPTCHA korrekt gelöst wurde
-    if (recaptchaToken) {
+    // if (recaptchaToken) {
       try {
         const templateParams = {
           user_name: name,
           subject: subject,
           user_email: email,
           message: message,
-          "g-recaptcha-response": recaptchaToken, // Fügen Sie den reCAPTCHA-Token zu den Template-Parametern hinzu
+          // "g-recaptcha-response": recaptchaToken, // Fügen Sie den reCAPTCHA-Token zu den Template-Parametern hinzu
         };
         const response = await emailjs.send(
           "service_23kqg8i",
@@ -72,9 +72,9 @@ const Formular = ({}) => {
       } catch (error) {
         console.error("E-Mail senden fehlgeschlagen:", error);
       }
-    } else {
-      setIsNotVerified(true);
-    }
+    // } else {
+    //   setIsNotVerified(true);
+    // }
   };
 
   return (
@@ -181,20 +181,20 @@ const Formular = ({}) => {
               Nachricht
             </label>
           </div>
-          <div className=" w-[100%] sm:w-[90%]">
+          {/* <div className=" w-[100%] sm:w-[90%]">
             <ReCAPTCHA 
               sitekey="6LehRS4mAAAAALyWPUQbZdZASUIanXauJnxDVHCw"
               onChange={handleRecaptcha}
               type="image"
             />
-          </div>
-          <p className={`text-red-600 ${isNotVerified ? "block" : "hidden"}`}>
+          </div> */}
+          {/* <p className={`text-red-600 ${isNotVerified ? "block" : "hidden"}`}>
             Recaptcha verifizieren!
-          </p>
+          </p> */}
 
           <button
             type="submit"
-            className="bg-green-500 rounded-lg text-white py-4 text-textwhite w-[100%] sm:w-[90%] text-center hover:opacity-80 duration-100"
+            className="bg-accent rounded-lg text-white py-4 text-textwhite w-[100%] sm:w-[90%] text-center hover:opacity-80 duration-100"
           >
             <span className="uppercase">Senden</span>
           </button>
