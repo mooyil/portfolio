@@ -71,7 +71,7 @@ const Navbar = () => {
         onClick={handleToggle}
         className={`sm:hidden  py-0 px-2.5 rounded-lg sm:right-10 right-2 cursor-pointer absolute `}
       >
-        <div class={`nav-icon2 ${toggle ? "nav-icon2 open" : "nav-icon2"}`}>
+        <div className={`nav-icon2 ${toggle ? "nav-icon2 open" : "nav-icon2"}`}>
           <span></span>
           <span></span>
           <span></span>
