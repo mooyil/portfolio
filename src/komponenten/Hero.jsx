@@ -36,7 +36,7 @@ const Hero = () => {
               data-aos-delay="800"
               className="text-[18px] md:text-[20px] max-w-[750px] mb-4 md:mb-6 "
             >
-              Ich bin ein selbstelernter, motivierter Full-Stack-Entwickler mit
+              Ich bin ein selbsterlernter, motivierter Full-Stack-Entwickler mit
               einem starken Interesse an Technologien und einer ambitionierten
               Arbeitsweise.
             </p>

@@ -27,7 +27,7 @@ const AboutMe = () => {
             </p>
           </div>
           <div className="py-4">
-            <a href="#" className="bg-white text-gray-900 p-4 px-8 rounded">
+            <a href="#kontakt" className="bg-white text-gray-900 p-4 px-8 rounded">
               Kontakt
             </a>
           </div>
