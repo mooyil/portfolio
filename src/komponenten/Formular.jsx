@@ -183,7 +183,7 @@ const Formular = ({}) => {
           </div>
           <div className=" w-[100%] sm:w-[90%]">
             <ReCAPTCHA 
-              sitekey="6LdY1FElAAAAACo3T90aw-0zq4e_c_eG0JeVdQCe"
+              sitekey="6LehRS4mAAAAALyWPUQbZdZASUIanXauJnxDVHCw"
               onChange={handleRecaptcha}
               type="image"
             />
